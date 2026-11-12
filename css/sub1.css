@@ -1,0 +1,435 @@
+/* 서브 비주얼 및 학습안내 탭 */
+.sub1-main {
+  padding: 5rem 1.05% 0;
+}
+
+.sub1-visual {
+  position: relative;
+  display: grid;
+  min-height: 25rem;
+  border-radius: 2rem;
+  place-items: center;
+  background: url("../img/page-lead-background.jpg") center / cover no-repeat;
+}
+
+.sub1-visual h1 {
+  color: #fff;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -.04em;
+}
+
+.sub1-tabs {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  left: 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  min-height: 3.75rem;
+  border-radius: 1.8rem 1.8rem 0 0;
+  background: rgb(3 17 86 / 78%);
+}
+
+.sub1-tab {
+  display: grid;
+  padding: .6rem 1rem;
+  border-radius: 1.8rem 1.8rem 0 0;
+  place-items: center;
+  color: #fff;
+  font-size: var(--font-size-body);
+  font-weight: 600;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.sub1-tab:hover,
+.sub1-tab:focus-visible { background: rgb(255 255 255 / 15%); }
+.sub1-tab.is-active { background: #fff; color: #111; }
+
+@media (max-width: 1024px) {
+  .sub1-main { padding: 4rem 5% 0; }
+  .sub1-visual { min-height: clamp(13rem, 29.3vw, 18.75rem); border-radius: 1.25rem; }
+  .sub1-visual h1 { font-size: clamp(1.6rem, 3.5vw, 2.1rem); }
+  .sub1-tabs { display: none; }
+}
+
+@media (max-width: 600px) {
+  .sub1-main { padding: 4rem 5% 0; }
+  .sub1-visual { min-height: 10rem; border-radius: 1rem; }
+  .sub1-visual h1 { font-size: 1.35rem; }
+}
+
+/* 03 시안: 온라인 학습 소개 문구 */
+.sub1-intro {
+  display: flex;
+  min-height: 26rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  color: #111;
+  text-align: center;
+}
+
+.sub1-intro h2 {
+  font-size: clamp(1.7rem, 2.25vw, 2.65rem);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -.04em;
+}
+
+.sub1-intro-brand {
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.sub1-intro-brand > span { color: var(--color-yellow); }
+.sub1-intro-brand i { color: var(--color-blue); font-style: normal; }
+.sub1-intro-brand b { color: var(--color-green); }
+
+.sub1-intro p {
+  margin-top: 2.5rem;
+  font-size: clamp(1rem, 1.25vw, 1.45rem);
+  line-height: 1.55;
+}
+
+.sub1-intro-emphasis { color: #ff1d25; }
+
+@media (max-width: 1024px) {
+  .sub1-intro { min-height: 18.75rem; padding: 2.5rem 1.25rem; }
+  .sub1-intro h2 { font-size: clamp(1.5rem, 2.8vw, 1.9rem); }
+  .sub1-intro p { margin-top: 1.6rem; font-size: clamp(.95rem, 1.75vw, 1.15rem); }
+}
+
+@media (max-width: 600px) {
+  .sub1-intro { min-height: 12.5rem; padding: 2rem .8rem; }
+  .sub1-intro h2 { font-size: 1.2rem; line-height: 1.35; }
+  .sub1-intro p { margin-top: 1.2rem; font-size: var(--font-size-small); line-height: 1.55; }
+}
+
+/* 04 시안: 반복 학습 소개 이미지 */
+.sub1-feature {
+  position: relative;
+  width: 80%;
+  margin: 0 auto 5rem;
+  overflow: hidden;
+  border-radius: 3rem;
+}
+
+.sub1-feature-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.sub1-feature-copy {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  min-height: 28%;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background: rgb(67 42 31 / 70%);
+  color: #fff;
+  font-size: clamp(.85rem, 1vw, 1.1rem);
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .sub1-feature { width: 90%; margin-bottom: 3rem; border-radius: 1.5rem; }
+  .sub1-feature-copy { display: none; }
+}
+
+@media (max-width: 600px) {
+  .sub1-feature { margin-bottom: 2.5rem; border-radius: 1.25rem; }
+  .sub1-feature-copy {
+    position: static;
+    display: block;
+    width: 100%;
+    min-height: 0;
+    padding: 1.4rem 1.5rem;
+    background: #999;
+    font-size: var(--font-size-caption);
+    line-height: 1.65;
+  }
+}
+
+/* 05 시안: 영어가 쌓이는 이유 */
+.sub1-reasons {
+  width: 97%;
+  margin: 0 auto 5rem;
+  padding: 7.5rem 9% 6rem;
+  border-radius: 2rem;
+  background: #edf5fa;
+}
+
+.sub1-reasons-heading {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.sub1-reasons-heading p {
+  margin-bottom: .45rem;
+  color: #168bd0;
+  font-size: var(--font-size-body);
+  font-weight: 700;
+}
+
+.sub1-reasons-heading h2 {
+  color: #111;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -.035em;
+}
+
+.sub1-reasons-list {
+  display: grid;
+  gap: 6rem;
+}
+
+.sub1-reason {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: var(--sub1-item-column-gap);
+}
+
+.sub1-reason-reverse .sub1-reason-image-wrap { grid-column: 2; grid-row: 1; }
+.sub1-reason-reverse .sub1-reason-copy { grid-column: 1; grid-row: 1; }
+
+.sub1-reason-image-wrap {
+  overflow: hidden;
+  padding: var(--sub1-image-frame-padding);
+  border-radius: 2.5rem;
+  background: #fff;
+  box-shadow: 0 1.2rem 2rem rgb(35 57 70 / 12%);
+}
+
+.sub1-reason-image-wrap img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.55;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.sub1-reason-copy { color: #333; }
+.sub1-reason-number { display: block; margin-bottom: 1.4rem; color: #aabac5; font-size: var(--font-size-body); font-weight: 700; }
+.sub1-reason-copy h3 { margin-bottom: 1.2rem; color: #111; font-size: 1.25rem; font-weight: 700; }
+.sub1-reason-copy p { font-size: .95rem; line-height: 1.65; }
+
+@media (max-width: 1024px) {
+  .sub1-reasons { width: 90%; margin-bottom: 3rem; padding: 4rem 5% 5rem; border-radius: 1.5rem; }
+  .sub1-reasons-heading { margin-bottom: 2.7rem; }
+  .sub1-reasons-list { gap: 5rem; }
+  .sub1-reason { gap: var(--sub1-item-column-gap-tablet); }
+  .sub1-reason-image-wrap { padding: var(--sub1-image-frame-padding-tablet); border-radius: 1.8rem; }
+  .sub1-reason-image-wrap img { border-radius: 1.45rem; }
+  .sub1-reason-number { margin-bottom: .8rem; }
+  .sub1-reason-copy h3 { margin-bottom: .9rem; font-size: 1.15rem; }
+  .sub1-reason-copy p { font-size: .85rem; }
+}
+
+@media (max-width: 600px) {
+  .sub1-reasons { width: 90%; margin-bottom: 2.5rem; padding: 3.5rem 5% 4rem; border-radius: 1.25rem; }
+  .sub1-reasons-heading { margin-bottom: 2.2rem; }
+  .sub1-reasons-heading p { font-size: .85rem; }
+  .sub1-reasons-heading h2 { font-size: 1.35rem; }
+  .sub1-reasons-list { gap: 3rem; }
+  .sub1-reason { display: flex; flex-direction: column; align-items: stretch; gap: var(--sub1-item-stack-gap); }
+  .sub1-reason-reverse .sub1-reason-image-wrap { order: 0; }
+  .sub1-reason-reverse .sub1-reason-copy { order: 1; }
+  .sub1-reason-image-wrap { padding: var(--sub1-image-frame-padding-mobile); border-radius: 1.5rem; }
+  .sub1-reason-image-wrap img { border-radius: 1.2rem; }
+  .sub1-reason-number { margin-bottom: .6rem; font-size: .85rem; }
+  .sub1-reason-copy h3 { margin-bottom: .8rem; font-size: var(--font-size-body); }
+  .sub1-reason-copy p { font-size: var(--font-size-caption); line-height: 1.6; }
+}
+
+/* 06 시안: English ONE만의 학습 방식 */
+.sub1-method {
+  width: 97%;
+  margin: 0 auto 5rem;
+  padding: 5rem 8% 4rem;
+  color: #333;
+}
+
+.sub1-method-heading {
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.sub1-method-heading > p {
+  margin-bottom: .4rem;
+  color: #168bd0;
+  font-size: var(--font-size-body);
+  font-weight: 600;
+}
+
+.sub1-method-heading h2 {
+  color: #111;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -.04em;
+}
+
+.sub1-method-brand { font-weight: 900; white-space: nowrap; }
+.sub1-method-brand > span { color: var(--color-yellow); }
+.sub1-method-brand i { color: var(--color-blue); font-style: normal; }
+.sub1-method-brand b { color: var(--color-green); }
+
+.sub1-method-list {
+  display: grid;
+  gap: 5.5rem;
+}
+
+.sub1-method-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: var(--sub1-item-column-gap);
+}
+
+.sub1-method-item-reverse .sub1-method-image-wrap { grid-column: 2; grid-row: 1; }
+.sub1-method-item-reverse .sub1-method-copy { grid-column: 1; grid-row: 1; }
+
+.sub1-method-image-wrap {
+  overflow: hidden;
+  padding: var(--sub1-image-frame-padding);
+  border-radius: 2.5rem;
+  background: #fff;
+  box-shadow: 0 1.2rem 2rem rgb(35 57 70 / 14%);
+}
+
+.sub1-method-image-wrap img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.55;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.sub1-method-number { display: block; margin-bottom: 1.4rem; color: #aabac5; font-size: var(--font-size-body); font-weight: 700; }
+.sub1-method-copy h3 { margin-bottom: 1rem; color: #111; font-size: 1.25rem; font-weight: 700; }
+.sub1-method-copy p { font-size: .95rem; line-height: 1.65; }
+
+@media (max-width: 1024px) {
+  .sub1-method { width: 90%; margin-bottom: 3rem; padding: 4rem 0 3rem; }
+  .sub1-method-heading { margin-bottom: 2.7rem; }
+  .sub1-method-heading h2 { font-size: 1.8rem; }
+  .sub1-method-list { gap: 4.5rem; }
+  .sub1-method-item { gap: var(--sub1-item-column-gap-tablet); }
+  .sub1-method-image-wrap { padding: var(--sub1-image-frame-padding-tablet); border-radius: 1.8rem; }
+  .sub1-method-image-wrap img { border-radius: 1.45rem; }
+  .sub1-method-number { margin-bottom: .8rem; }
+  .sub1-method-copy h3 { margin-bottom: .8rem; font-size: 1.15rem; }
+  .sub1-method-copy p { font-size: .85rem; }
+}
+
+@media (max-width: 600px) {
+  .sub1-method { width: 90%; margin-bottom: 2.5rem; padding: 3.2rem 0 2rem; }
+  .sub1-method-heading { margin-bottom: 2rem; }
+  .sub1-method-heading > p { font-size: var(--font-size-caption); }
+  .sub1-method-heading h2 { font-size: 1.25rem; }
+  .sub1-method-list { gap: 3rem; }
+  .sub1-method-item { display: flex; flex-direction: column; align-items: stretch; gap: var(--sub1-item-stack-gap); }
+  .sub1-method-item-reverse .sub1-method-image-wrap { order: 0; }
+  .sub1-method-item-reverse .sub1-method-copy { order: 1; }
+  .sub1-method-image-wrap { padding: var(--sub1-image-frame-padding-mobile); border-radius: 1.5rem; }
+  .sub1-method-image-wrap img { aspect-ratio: 1.55; border-radius: 1.2rem; }
+  .sub1-method-number { margin-bottom: .6rem; font-size: .85rem; }
+  .sub1-method-copy h3 { margin-bottom: .7rem; font-size: var(--font-size-body); }
+  .sub1-method-copy p { font-size: var(--font-size-caption); line-height: 1.6; }
+}
+
+/* 학습 이유·방식 섹션 이미지 스크롤 등장 */
+.sub1-reason-image-wrap,
+.sub1-method-image-wrap {
+  opacity: 0;
+  transform: translateX(-3rem);
+  transition: opacity .7s ease, transform .7s cubic-bezier(.2, .7, .2, 1);
+}
+
+.sub1-reason-reverse .sub1-reason-image-wrap,
+.sub1-method-item-reverse .sub1-method-image-wrap {
+  transform: translateX(3rem);
+}
+
+.sub1-reason-image-wrap.is-visible,
+.sub1-method-image-wrap.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sub1-reason-image-wrap,
+  .sub1-method-image-wrap {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* 섹션 제목 줄별 스크롤 등장 */
+.sub1-reasons-heading > p,
+.sub1-reasons-heading h2,
+.sub1-method-heading > p,
+.sub1-method-heading h2 {
+  overflow: hidden;
+}
+
+.sub1-heading-line {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(110%);
+  transition: opacity .65s ease, transform .65s cubic-bezier(.2, .7, .2, 1);
+}
+
+.sub1-reasons-heading.is-visible > p .sub1-heading-line,
+.sub1-method-heading.is-visible > p .sub1-heading-line {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sub1-reasons-heading.is-visible h2 .sub1-heading-line,
+.sub1-method-heading.is-visible h2 .sub1-heading-line {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: .22s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sub1-heading-line { opacity: 1; transform: none; transition: none; }
+}
+
+/* 이미지 다음에 같은 방향으로 나타나는 설명 글박스 */
+.sub1-reason-copy,
+.sub1-method-copy {
+  opacity: 0;
+  transform: translateX(-3rem);
+  transition: opacity .7s ease, transform .7s cubic-bezier(.2, .7, .2, 1);
+  transition-delay: .24s;
+}
+
+.sub1-reason-reverse .sub1-reason-copy,
+.sub1-method-item-reverse .sub1-method-copy {
+  transform: translateX(3rem);
+}
+
+.sub1-reason-copy.is-visible,
+.sub1-method-copy.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sub1-reason-copy,
+  .sub1-method-copy {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
